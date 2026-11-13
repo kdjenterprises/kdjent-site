@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About KDJ Enterprises | 25 Years of Enterprise IT for Small Business | Murrells Inlet, SC</title>
+<meta name="description" content="KDJ Enterprises is run by Kory Johnson, a 25-year enterprise technology veteran and Army Air Defense Artillery vet in Murrells Inlet, SC. Enterprise-grade IT for small business.">
+<meta property="og:title" content="About KDJ Enterprises">
+<meta property="og:description" content="25 years of enterprise IT, cloud, and security experience, pointed at small business. Veteran owned, based in Murrells Inlet, SC.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kdjent.com/about.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 72 95&quot;><path d=&quot;M34 8 L41 22 V66 H27 V22 Z&quot; fill=&quot;%23e5322e&quot;/><path d=&quot;M27 52 L18 66 H27 Z&quot; fill=&quot;%23e5322e&quot;/><path d=&quot;M41 52 L50 66 H41 Z&quot; fill=&quot;%23e5322e&quot;/><path d=&quot;M29 68 H39 L36 86 H32 Z&quot; fill=&quot;%23ffcf5a&quot;/><path d=&quot;M66 22 L46 44 L66 66&quot; stroke=&quot;%23e8edf6&quot; stroke-width=&quot;9&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; fill=&quot;none&quot;/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Sora:wght@400;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Inherit the live site's theme tokens and reset -->
+<link rel="stylesheet" href="/kdjent.c777dcbb.css">
+<style>
+  /* Fallback tokens in case the site stylesheet is ever renamed */
+  :root {
+    --background: 222 55% 5%;
+    --foreground: 218 45% 94%;
+    --card: 219 39% 12%;
+    --primary: 2 78% 54%;
+    --muted-foreground: 217 20% 65%;
+    --border: 219 40% 22%;
+    --radius: .625rem;
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  .about-wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* Header */
+  .site-header {
+    border-bottom: 1px solid hsl(var(--border));
+    background: hsl(var(--background) / .9);
+  }
+  .site-nav {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; padding: 1.1rem 0; flex-wrap: wrap;
+  }
+  .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+  .brand svg { height: 34px; width: auto; }
+  .brand-name { font-family: "Sora", sans-serif; font-weight: 800; font-size: 1.15rem; }
+  .brand-name strong { color: hsl(var(--foreground)); }
+  .brand-name span { font-weight: 400; color: hsl(var(--muted-foreground)); margin-left: .35rem; }
+  .nav-links { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; }
+  .nav-links a {
+    color: hsl(var(--muted-foreground));
+    text-decoration: none; font-weight: 500; font-size: .95rem;
+  }
+  .nav-links a:hover { color: hsl(var(--foreground)); }
+  .nav-links a.current {
+    color: hsl(var(--primary));
+    background: hsl(var(--primary) / .12);
+    padding: .45rem .9rem; border-radius: .5rem;
+  }
+  .btn-primary {
+    display: inline-block; background: hsl(var(--primary));
+    color: hsl(var(--foreground)); text-decoration: none;
+    font-weight: 600; font-size: .95rem;
+    padding: .6rem 1.2rem; border-radius: .55rem;
+  }
+  .btn-primary:hover { filter: brightness(1.1); }
+  a:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 3px; }
+
+  /* Hero */
+  .about-hero { padding: 5.5rem 0 3.5rem; }
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    color: hsl(var(--primary));
+    letter-spacing: .35em; font-size: .85rem; font-weight: 500;
+    margin-bottom: 1.2rem;
+  }
+  .about-hero h1 {
+    font-family: "Sora", sans-serif; font-weight: 800;
+    font-size: clamp(2.2rem, 5.5vw, 3.75rem);
+    line-height: 1.08; max-width: 20ch;
+  }
+  .about-hero h1 span { color: hsl(var(--primary)); }
+  .lede {
+    margin-top: 1.75rem; font-size: 1.25rem;
+    color: hsl(var(--muted-foreground)); max-width: 62ch;
+  }
+
+  /* Sections */
+  .about-section { padding: 2.5rem 0; }
+  .about-section h2 {
+    font-family: "Sora", sans-serif; font-weight: 700;
+    font-size: 1.7rem; margin-bottom: 1.1rem;
+  }
+  .about-section p { max-width: 68ch; color: hsl(var(--foreground) / .92); }
+  .about-section p + p { margin-top: 1rem; }
+
+  /* Stat cards, same treatment as the homepage cards */
+  .card-grid {
+    display: grid; gap: 1.4rem; margin: 1.5rem 0 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .stat-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: calc(var(--radius) + 4px);
+    padding: 1.8rem;
+  }
+  .stat-card .big {
+    font-family: "Sora", sans-serif; font-weight: 800;
+    font-size: 2rem; color: hsl(var(--primary));
+  }
+  .stat-card h3 {
+    font-family: "Sora", sans-serif; font-weight: 700;
+    font-size: 1.1rem; margin: .5rem 0 .55rem;
+  }
+  .stat-card p { color: hsl(var(--muted-foreground)); font-size: .98rem; }
+
+  /* Service callout */
+  .service-callout {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-left: 4px solid #ffcf5a;
+    border-radius: var(--radius);
+    padding: 1.5rem 1.75rem; margin-top: 1.5rem; max-width: 68ch;
+  }
+  .service-callout p { color: hsl(var(--foreground) / .92); }
+
+  /* CTA */
+  .about-cta {
+    margin: 3.5rem 0 4.5rem;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: calc(var(--radius) + 6px);
+    padding: 3rem 2rem; text-align: center;
+  }
+  .about-cta h2 {
+    font-family: "Sora", sans-serif; font-weight: 800; font-size: 2rem;
+  }
+  .about-cta p {
+    color: hsl(var(--muted-foreground));
+    max-width: 55ch; margin: 1rem auto 1.75rem;
+  }
+
+  .site-footer {
+    border-top: 1px solid hsl(var(--border));
+    padding: 2rem 0 2.5rem;
+    color: hsl(var(--muted-foreground)); font-size: .9rem;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="about-wrap">
+    <nav class="site-nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 95" aria-hidden="true"><path d="M34 8 L41 22 V66 H27 V22 Z" fill="#e5322e"/><path d="M27 52 L18 66 H27 Z" fill="#e5322e"/><path d="M41 52 L50 66 H41 Z" fill="#e5322e"/><path d="M29 68 H39 L36 86 H32 Z" fill="#ffcf5a"/><path d="M66 22 L46 44 L66 66" stroke="#e8edf6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="brand-name"><strong>KDJ</strong><span>Enterprises</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/security-cameras.html">Cameras</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/support.html">Support</a>
+        <a href="/about.html" class="current" aria-current="page">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="/#contact" class="btn-primary">Get started</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="about-wrap">
+
+  <div class="about-hero">
+    <p class="eyebrow">ABOUT KDJ</p>
+    <h1>Twenty-five years of enterprise IT, <span>pointed at small business.</span></h1>
+    <p class="lede">KDJ Enterprises exists because the discipline that keeps global manufacturers running, monitored systems, tested backups, real security, is rarely offered to small businesses at a price that makes sense. We close that gap.</p>
+  </div>
+
+  <section class="about-section">
+    <h2>The guy behind it</h2>
+    <p>KDJ is run by me, Kory Johnson, from right here in Murrells Inlet, South Carolina. I have spent my entire career in enterprise technology, and I started the same way I work today: hands on. Early on I personally deployed more than 60 ERP systems for companies around the world, managing the servers, the databases, and everything in between.</p>
+    <p>From there I was recruited to build a cloud software offering from the ground up. I ran the operations behind its first 10,000 users. Later, as a regional CTO for a national managed IT services provider, I advised companies of every size on hardening their IT operations. Today I lead managed services organizations supporting some of the largest manufacturers in North and Latin America.</p>
+    <p>Big companies pay a lot of money for that experience. Your business gets it by sending one email.</p>
+  </section>
+
+  <section class="about-section" aria-label="Track record">
+    <div class="card-grid">
+      <div class="stat-card">
+        <div class="big">25+</div>
+        <h3>Years in enterprise tech</h3>
+        <p>From hands-on consultant to regional CTO to senior executive. There is not much we have not seen break, or fixed.</p>
+      </div>
+      <div class="stat-card">
+        <div class="big">60+</div>
+        <h3>Systems deployed worldwide</h3>
+        <p>ERP implementations delivered across every platform and database that mattered. Deployment discipline is muscle memory here.</p>
+      </div>
+      <div class="stat-card">
+        <div class="big">10,000</div>
+        <h3>Cloud users at launch</h3>
+        <p>Built and ran the operations behind a cloud platform's first 10,000 users.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>Why the red and gold</h2>
+    <p>Before the tech career, I served in the North Dakota Army National Guard with the 188th Air Defense Artillery. The colors in the KDJ logo are a nod to the ADA branch colors, scarlet and gold.</p>
+    <div class="service-callout">
+      <p>Air Defense has one job: watch the sky and protect everything behind you. That is exactly how we approach IT. Watch the threats, guard the systems, and make sure the people counting on you never have to think about it.</p>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>Rooted here</h2>
+    <p>My family and I live in Murrells Inlet. I have coached 16U softball, served on the local sports boosters board, and did a tour as HOA president. When you email KDJ, you are not getting a ticket number at a national call center. You are getting a neighbor who answers.</p>
+  </section>
+
+  <div class="about-cta">
+    <h2>Want the department you did not have to hire?</h2>
+    <p>Whether you need someone to run your IT outright or just want a second set of eyes on your setup, email is the fastest way to reach us.</p>
+    <a class="btn-primary" href="mailto:support@kdjent.com">Email support@kdjent.com</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="about-wrap">
+    <p>&copy; 2026 KDJ Enterprises, LLC &middot; Murrells Inlet, South Carolina &middot; Veteran owned</p>
+  </div>
+</footer>
+
+</body>
+</html>

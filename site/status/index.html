@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>App Status | KDJ Apps</title>
+<meta name="description" content="What KDJ Apps has live in the App Store and Google Play, what is in review, and what is being built right now.">
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Sora:wght@400;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#04060c; --card:#0b1220; --line:#1c2b47; --text:#e8edf6; --muted:#93a1b8;
+    --scarlet:#e5322e; --scarlet-deep:#c9201c; --gold:#ffcf5a; --green:#3ecf8e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;line-height:1.6}
+  .wrap{max-width:880px;margin:0 auto;padding:56px 22px 80px}
+  header.top{margin-bottom:36px}
+  h1{font-family:'Black Ops One',sans-serif;font-weight:400;font-size:clamp(26px,5vw,38px);letter-spacing:1px;line-height:1.15;margin-bottom:14px}
+  .lede{color:var(--muted);font-size:17px;max-width:640px}
+  .tally{display:flex;gap:14px;flex-wrap:wrap;margin:26px 0 8px}
+  .tally div{flex:1;min-width:150px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .tally b{display:block;font-family:'IBM Plex Mono',monospace;font-size:30px;color:var(--gold);line-height:1.1}
+  .tally span{color:var(--muted);font-size:13.5px}
+  h2{font-family:'Black Ops One',sans-serif;font-weight:400;font-size:20px;letter-spacing:1px;margin:38px 0 14px}
+  .app{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:16px}
+  .app h3{font-family:'Sora',sans-serif;font-weight:800;font-size:19px;margin-bottom:4px}
+  .app .about{color:var(--muted);font-size:14.5px;margin-bottom:14px}
+  .plat{border-top:1px solid var(--line);padding-top:12px;margin-top:12px}
+  .plat-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+  .plat-name{font-weight:600;font-size:14.5px}
+  .badge{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+  .badge.live{color:#04060c;background:var(--green);border-color:var(--green)}
+  .badge.review{color:#04060c;background:var(--gold);border-color:var(--gold)}
+  .steps{display:flex;gap:4px;margin-bottom:8px}
+  .steps i{flex:1;height:6px;border-radius:3px;background:var(--line)}
+  .steps i.on{background:var(--scarlet)}
+  .steps.live i.on{background:var(--green)}
+  .note{font-size:14px;color:var(--text)}
+  .note a{color:var(--gold);text-decoration:none;font-weight:600}
+  .activity{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted)}
+  .legend{color:var(--muted);font-size:13px;margin-top:6px}
+  .fine{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:22px;margin-top:40px}
+  .fine a{color:var(--gold);text-decoration:none}
+  .site-header{border-bottom:1px solid var(--line);background:rgba(4,6,12,.9)}
+  .nav-wrap{max-width:880px;margin:0 auto;padding:0 22px}
+  .site-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 0;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+  .brand svg{height:34px;width:auto}
+  .brand-name{font-family:'Sora',sans-serif;font-weight:800;font-size:1.15rem;color:var(--text)}
+  .brand-name span{font-weight:400;color:var(--muted);margin-left:.35rem}
+  .nav-links{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap}
+  .nav-links a{color:var(--muted);text-decoration:none;font-weight:500;font-size:.95rem}
+  .nav-links a:hover{color:var(--text)}
+  a:focus-visible{outline:2px solid var(--scarlet);outline-offset:3px}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-wrap">
+    <nav class="site-nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 95" aria-hidden="true"><path d="M34 8 L41 22 V66 H27 V22 Z" fill="#e5322e"/><path d="M27 52 L18 66 H27 Z" fill="#e5322e"/><path d="M41 52 L50 66 H41 Z" fill="#e5322e"/><path d="M29 68 H39 L36 86 H32 Z" fill="#ffcf5a"/><path d="M66 22 L46 44 L66 66" stroke="#e8edf6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="brand-name"><strong>KDJ</strong><span>Enterprises</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/apps.html">Apps</a>
+        <a href="/security-cameras.html">Cameras</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/support.html">Support</a>
+        <a href="/about.html">About</a>
+        <a href="/#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <header class="top">
+    <h1>APP STATUS</h1>
+    <p class="lede">Every app KDJ Apps has shipped or is building right now, and where each one stands on iPhone and Android.</p>
+    <div class="tally" id="tally"></div>
+    <p class="legend">Each bar has five steps: built, tested on a phone, in store review, approved, live.</p>
+  </header>
+  <div id="groups"><p class="note">Loading...</p></div>
+  <p class="fine" id="updated">Want an app like these for your business? <a href="/apps.html">See how we build them</a>.</p>
+</div>
+<script>
+(function(){
+  var STAGE = ['Not started','Built','Tested on a phone','In store review','Approved','Live'];
+  function el(tag, cls, text){ var e=document.createElement(tag); if(cls) e.className=cls; if(text!=null) e.textContent=text; return e; }
+  function fmtDate(iso){ var d=new Date(iso); if(isNaN(d)) return ''; return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}); }
+  function best(app){ return Math.max.apply(null, app.platforms.map(function(p){return p.stage;})); }
+  function card(app){
+    var c=el('div','app'); c.appendChild(el('h3',null,app.name)); c.appendChild(el('p','about',app.about));
+    app.platforms.forEach(function(p){
+      var row=el('div','plat'), head=el('div','plat-head');
+      head.appendChild(el('span','plat-name',p.platform));
+      var b=el('span','badge'+(p.stage===5?' live':(p.stage>=3?' review':'')),STAGE[p.stage]||''); head.appendChild(b);
+      row.appendChild(head);
+      var steps=el('div','steps'+(p.stage===5?' live':'')); for(var i=1;i<=5;i++){ steps.appendChild(el('i',i<=p.stage?'on':'')); } row.appendChild(steps);
+      var n=el('p','note',p.note||''); if(p.link){ n.appendChild(document.createTextNode(' ')); var a=el('a',null,'Get it'); a.href=p.link; a.rel='noopener'; n.appendChild(a); } row.appendChild(n);
+      c.appendChild(row);
+    });
+    var act=app.activity;
+    if(act && (act.builds_30d!=null || act.last_build)){
+      var parts=[]; if(act.builds_30d!=null) parts.push(act.builds_30d+' build'+(act.builds_30d===1?'':'s')+' in the last 30 days');
+      if(act.last_build) parts.push('last build '+fmtDate(act.last_build));
+      if(act.updates_30d) parts.push(act.updates_30d+' app update'+(act.updates_30d===1?'':'s')+' sent');
+      c.appendChild(el('p','activity',parts.join(' | ')));
+    }
+    return c;
+  }
+  function render(data){
+    var apps=data.apps||[], groups=document.getElementById('groups'); groups.innerHTML='';
+    var live=apps.filter(function(a){return best(a)===5;}), review=apps.filter(function(a){var s=best(a);return s===3||s===4;}), work=apps.filter(function(a){return best(a)<3;});
+    var builds=apps.reduce(function(t,a){return t+((a.activity&&a.activity.builds_30d)||0);},0);
+    var tally=document.getElementById('tally'); tally.innerHTML='';
+    [[live.length,'live in a store'],[review.length,'with Apple or Google'],[work.length,'being built']].concat(builds?[[builds,'builds in the last 30 days']]:[]).forEach(function(t){ var d=el('div'); d.appendChild(el('b',null,String(t[0]))); d.appendChild(el('span',null,t[1])); tally.appendChild(d); });
+    [['Live now',live],['In store review',review],['In the workshop',work]].forEach(function(g){ if(!g[1].length) return; groups.appendChild(el('h2',null,g[0])); g[1].forEach(function(a){groups.appendChild(card(a));}); });
+    if(data.updated){ var u=document.getElementById('updated'); u.insertBefore(document.createTextNode('Updated '+fmtDate(data.updated)+'. '),u.firstChild); }
+  }
+  fetch('status.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.json();}).then(render).catch(function(){ document.getElementById('groups').innerHTML='<p class="note">Status is not available right now. Please try again later.</p>'; });
+})();
+</script>
+</body>
+</html>

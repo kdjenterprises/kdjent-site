@@ -1,0 +1,125 @@
+{
+  "updated": "2026-11-13T05:30:00Z",
+  "apps": [
+    {
+      "id": "gear-upkeep",
+      "name": "Gear Upkeep",
+      "about": "A maintenance tracker for the equipment around your home, with reminders when something is due.",
+      "platforms": [
+        {
+          "platform": "iPhone",
+          "stage": 5,
+          "note": "Live on the App Store.",
+          "link": "https://apps.apple.com/app/id6830923378"
+        },
+        {
+          "platform": "Android",
+          "stage": 2,
+          "note": "Tested on a phone. Google Play listing coming next."
+        }
+      ],
+      "activity": null
+    },
+    {
+      "id": "ladderly",
+      "name": "Ladderly",
+      "about": "A word ladder puzzle game: change one letter at a time to climb from one word to another.",
+      "platforms": [
+        {
+          "platform": "iPhone",
+          "stage": 4,
+          "note": "Approved by Apple."
+        }
+      ],
+      "activity": null
+    },
+    {
+      "id": "tallymile",
+      "name": "Tallymile",
+      "about": "Automatic mileage log for taxes. Records every drive on its own and builds tax-ready reports.",
+      "platforms": [
+        {
+          "platform": "iPhone",
+          "stage": 3,
+          "note": "Waiting for Apple's review."
+        },
+        {
+          "platform": "Android",
+          "stage": 2,
+          "note": "Passed a real-road test drive. Google Play listing coming next."
+        }
+      ],
+      "activity": null
+    },
+    {
+      "id": "fly-guys",
+      "name": "Fly Guys",
+      "about": "A private trip log for one group of fly fishing friends: twenty years of trips, a countdown to the next one, and a day on the water with GPS.",
+      "platforms": [
+        {
+          "platform": "iPhone",
+          "stage": 2,
+          "note": "Store build ready. Going to the App Store as a private, link-only app."
+        },
+        {
+          "platform": "Android",
+          "stage": 2,
+          "note": "Tested. Going to Google Play for the group only."
+        }
+      ],
+      "activity": null
+    },
+    {
+      "id": "debtday",
+      "name": "Debtday",
+      "about": "A debt payoff planner.",
+      "platforms": [
+        {
+          "platform": "iPhone",
+          "stage": 1,
+          "note": "Store build ready for testing."
+        }
+      ],
+      "activity": null
+    },
+    {
+      "id": "nextoff",
+      "name": "Nextoff",
+      "about": "A calendar for rotating shift schedules.",
+      "platforms": [
+        {
+          "platform": "iPhone",
+          "stage": 1,
+          "note": "Built and passed its first test."
+        }
+      ],
+      "activity": null
+    },
+    {
+      "id": "tipbook",
+      "name": "Tipbook",
+      "about": "A tip tracker for servers, bartenders and anyone who works for tips.",
+      "platforms": [
+        {
+          "platform": "iPhone",
+          "stage": 1,
+          "note": "Built and passed its first test."
+        }
+      ],
+      "activity": null
+    },
+    {
+      "id": "inchwise",
+      "name": "Inchwise",
+      "about": "A feet and inches calculator for builders and DIY projects.",
+      "platforms": [
+        {
+          "platform": "iPhone",
+          "stage": 1,
+          "note": "Built and passed its first test."
+        }
+      ],
+      "activity": null
+    }
+  ]
+}

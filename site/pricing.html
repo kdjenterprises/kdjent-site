@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Managed IT Pricing | KDJ Enterprises</title>
+<meta name="description" content="One flat monthly plan for managed IT monitoring and maintenance, quoted per device. No contracts, no surprises.">
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Sora:wght@400;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#04060c; --card:#0b1220; --line:#1c2b47; --text:#e8edf6; --muted:#93a1b8;
+    --scarlet:#e5322e; --scarlet-deep:#c9201c; --gold:#ffcf5a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;line-height:1.6}
+  .wrap{max-width:880px;margin:0 auto;padding:56px 22px 80px}
+  header{margin-bottom:44px}
+  h1{font-family:'Black Ops One',sans-serif;font-weight:400;font-size:clamp(26px,5vw,38px);letter-spacing:1px;line-height:1.15;margin-bottom:14px}
+  .lede{color:var(--muted);font-size:17px;max-width:620px}
+  .lede b{color:var(--text)}
+
+  .ratecard{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:26px}
+  .rate{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:20px 24px;border-bottom:1px solid var(--line)}
+  .rate:last-child{border-bottom:none}
+  .rate .what b{font-size:16px}
+  .rate .what span{display:block;color:var(--muted);font-size:13.5px}
+  .price{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:20px;color:var(--gold);white-space:nowrap}
+  .price small{color:var(--muted);font-size:12px;font-weight:500}
+
+  .calc{background:var(--card);border:2px solid var(--scarlet);border-radius:14px;padding:28px 26px;margin-bottom:26px}
+  .calc h2{font-family:'Black Ops One',sans-serif;font-weight:400;font-size:19px;letter-spacing:1px;margin-bottom:6px}
+  .calc .hint{color:var(--muted);font-size:14px;margin-bottom:20px}
+  .fields{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+  .field{flex:1;min-width:140px}
+  .field label{display:block;font-size:13.5px;font-weight:600;margin-bottom:6px}
+  .field input{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:8px;color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:18px;padding:11px 12px;text-align:center}
+  .field input:focus{outline:2px solid var(--scarlet);border-color:var(--scarlet)}
+  .total-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
+  .total{font-family:'IBM Plex Mono',monospace}
+  .total .amount{font-size:34px;font-weight:600;color:var(--gold)}
+  .total .per{color:var(--muted);font-size:14px}
+    .btn{display:inline-block;border:none;cursor:pointer;font-family:inherit;background:var(--scarlet);color:#fff;font-weight:700;font-size:16px;text-decoration:none;padding:14px 30px;border-radius:10px}
+  .btn:hover{background:var(--scarlet-deep)}
+  .talk{color:var(--muted);font-size:13.5px;margin-top:14px}
+  .talk a{color:var(--gold);text-decoration:none;font-weight:600}
+
+  .cols{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:26px}
+  .col{flex:1;min-width:280px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+  .col h3{font-size:16px;margin-bottom:12px}
+  .col.in h3{color:var(--gold)}
+  .col.out h3{color:var(--muted)}
+  .col p{color:var(--muted);font-size:14.5px;margin-bottom:10px}
+  .col p b{color:var(--text);font-weight:600}
+
+  .fine{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:22px}
+  .fine a{color:var(--gold);text-decoration:none}
+
+  /* Site header, matches about.html */
+  .site-header{border-bottom:1px solid var(--line);background:rgba(4,6,12,.9)}
+  .nav-wrap{max-width:880px;margin:0 auto;padding:0 22px}
+  .site-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 0;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+  .brand svg{height:34px;width:auto}
+  .brand-name{font-family:'Sora',sans-serif;font-weight:800;font-size:1.15rem;color:var(--text)}
+  .brand-name span{font-weight:400;color:var(--muted);margin-left:.35rem}
+  .nav-links{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap}
+  .nav-links a{color:var(--muted);text-decoration:none;font-weight:500;font-size:.95rem}
+  .nav-links a:hover{color:var(--text)}
+  .nav-links a.current{color:var(--scarlet);background:rgba(229,50,46,.12);padding:.45rem .9rem;border-radius:.5rem}
+  a:focus-visible{outline:2px solid var(--scarlet);outline-offset:3px}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-wrap">
+    <nav class="site-nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 95" aria-hidden="true"><path d="M34 8 L41 22 V66 H27 V22 Z" fill="#e5322e"/><path d="M27 52 L18 66 H27 Z" fill="#e5322e"/><path d="M41 52 L50 66 H41 Z" fill="#e5322e"/><path d="M29 68 H39 L36 86 H32 Z" fill="#ffcf5a"/><path d="M66 22 L46 44 L66 66" stroke="#e8edf6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="brand-name"><strong>KDJ</strong><span>Enterprises</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/apps.html">Apps</a>
+        <a href="/security-cameras.html">Cameras</a>
+        <a href="/pricing.html" class="current" aria-current="page">Pricing</a>
+        <a href="/support.html">Support</a>
+        <a href="/about.html">About</a>
+        <a href="/#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+
+  <header>
+    <h1>ONE FLAT MONTHLY PLAN.<br>YOUR COMPUTERS, HANDLED.</h1>
+    <p class="lede">KDJ Enterprises keeps your machines patched, monitored, and running so problems get caught before they cost you a workday. <b>Priced per device, billed monthly, cancel anytime.</b> No contracts to decode, no surprise invoices.</p>
+  </header>
+
+  <div class="ratecard">
+    <div class="rate">
+      <div class="what"><b>Endpoint</b><span>Workstations and servers, Windows or Mac</span></div>
+      <div class="price"><small>Quoted per device, monthly</small></div>
+    </div>
+  </div>
+
+  <div class="calc">
+    <h2>GET YOUR QUOTE</h2>
+    <p class="hint">Tell us how many computers and servers you have and we'll send you a flat monthly quote. No sales call needed.</p>
+    <div class="total-row">
+      <a class="btn" href="mailto:support@kdjent.com?subject=Managed%20IT%20quote&amp;body=How%20many%20computers%3A%20%0AHow%20many%20servers%3A%20%0ABusiness%20name%3A%20">Get a quote</a>
+    </div>
+    <p class="talk">Rather talk it through first? Email <a href="mailto:support@kdjent.com">support@kdjent.com</a>.</p>
+  </div>
+
+  <div class="cols">
+    <div class="col in">
+      <h3>Every plan includes</h3>
+      <p><b>Patching, done for you.</b> Windows, Mac, and 500+ common apps kept up to date on a schedule that doesn't interrupt your workday.</p>
+      <p><b>Around-the-clock monitoring.</b> Your machines report their health continuously; failing disks, missed updates, and security gaps get flagged to us automatically.</p>
+      <p><b>Remote fixes.</b> When something covered breaks, we connect in and fix it without waiting on a site visit.</p>
+      <p><b>A monthly plain-English report.</b> What was patched, what we caught, what's aging out. You always know the state of your fleet.</p>
+    </div>
+    <div class="col out">
+      <h3>Quoted separately</h3>
+      <p><b>Projects and new equipment.</b> New computer setups, office moves, server migrations, and upgrades get their own quote before any work starts.</p>
+      <p><b>Hardware and software licenses.</b> We'll recommend and source what you need at honest prices, billed at cost plus our time.</p>
+      <p><b>Major incidents outside coverage.</b> Think lightning strike, flood, or a machine we don't manage. We'll still show up, it's just billed hourly.</p>
+      <p><b>Custom apps and software.</b> iPhone apps and web tools, always with a written quote before any work starts. <a href="/apps.html" style="color:var(--gold);text-decoration:none;font-weight:600">See our apps</a>.</p>
+    </div>
+  </div>
+
+  <p class="fine">Service provided by KDJ Enterprises LLC, South Carolina. Billing is handled securely by Stripe; we never see or store your card number. Cancel anytime from your billing portal or by emailing <a href="mailto:support@kdjent.com">support@kdjent.com</a>.</p>
+
+</div>
+
+</body>
+</html>

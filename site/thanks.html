@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome Aboard | KDJ Enterprises</title>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#04060c;--card:#0b1220;--line:#1c2b47;--text:#e8edf6;--muted:#93a1b8;--scarlet:#e5322e;--gold:#ffcf5a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;max-width:520px;width:100%;padding:44px 36px;text-align:center}
+  h1{font-family:'Black Ops One',sans-serif;font-weight:400;font-size:26px;letter-spacing:1px;margin:18px 0 12px}
+  p{color:var(--muted);font-size:15.5px;line-height:1.65;margin-bottom:14px}
+  p b{color:var(--text)}
+  a{color:var(--gold);text-decoration:none;font-weight:600}
+  .home{display:inline-block;margin-top:14px;background:var(--scarlet);color:#fff;padding:12px 26px;border-radius:10px;font-weight:700}
+  .home:hover{background:#c9201c}
+</style>
+</head>
+<body>
+  <div class="card">
+    <svg width="110" height="65" viewBox="0 0 160 95" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto">
+      <defs><linearGradient id="fl" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffcf5a"/><stop offset="1" stop-color="#e5322e" stop-opacity="0"/>
+      </linearGradient></defs>
+      <path d="M34 8 L41 22 V66 H27 V22 Z" fill="#e5322e"/>
+      <path d="M27 52 L18 66 H27 Z" fill="#e5322e"/>
+      <path d="M41 52 L50 66 H41 Z" fill="#e5322e"/>
+      <path d="M29 68 H39 L36 86 H32 Z" fill="url(#fl)">
+        <animate attributeName="opacity" values="1;.5;1" dur="0.9s" repeatCount="indefinite"/>
+      </path>
+      <g stroke="#e8edf6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M64 22 L45 44 L64 66"/></g>
+      <text x="104" y="65" text-anchor="middle" font-family="'Black Ops One',sans-serif" font-size="46" fill="#e8edf6" letter-spacing="3">DJ</text>
+    </svg>
+    <h1>WELCOME ABOARD</h1>
+    <p><b>Your subscription is active and your receipt is on its way</b> to the email you entered at checkout.</p>
+    <p>Here's what happens next: we'll email you within <b>one business day</b> to schedule your setup. It takes about a minute per computer, and we'll walk you through every step.</p>
+    <p>Need us sooner? <a href="mailto:support@kdjent.com">support@kdjent.com</a>.</p>
+    <a class="home" href="https://kdjent.com">Back to kdjent.com</a>
+  </div>
+</body>
+</html>

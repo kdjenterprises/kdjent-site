@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom App Development for Small Business | iPhone Apps &amp; Web Tools | KDJ Enterprises, Murrells Inlet SC</title>
+<meta name="description" content="We build iPhone apps and web tools for small businesses in Murrells Inlet, Myrtle Beach, and the Grand Strand. See the apps KDJ has shipped to the App Store, plus how we work and our veteran discounts.">
+<meta property="og:title" content="Custom App Development for Small Business | KDJ Enterprises">
+<meta property="og:description" content="Three apps shipped to the App Store. Written quotes, and a working build on your phone within the first week.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kdjent.com/apps.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 72 95&quot;><path d=&quot;M34 8 L41 22 V66 H27 V22 Z&quot; fill=&quot;%23e5322e&quot;/><path d=&quot;M27 52 L18 66 H27 Z&quot; fill=&quot;%23e5322e&quot;/><path d=&quot;M41 52 L50 66 H41 Z&quot; fill=&quot;%23e5322e&quot;/><path d=&quot;M29 68 H39 L36 86 H32 Z&quot; fill=&quot;%23ffcf5a&quot;/><path d=&quot;M66 22 L46 44 L66 66&quot; stroke=&quot;%23e8edf6&quot; stroke-width=&quot;9&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; fill=&quot;none&quot;/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Sora:wght@400;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Inherit the live site's theme tokens and reset -->
+<link rel="stylesheet" href="/kdjent.c777dcbb.css">
+<style>
+  /* Fallback tokens in case the site stylesheet is ever renamed */
+  :root {
+    --background: 222 55% 5%;
+    --foreground: 218 45% 94%;
+    --card: 219 39% 12%;
+    --primary: 2 78% 54%;
+    --muted-foreground: 217 20% 65%;
+    --border: 219 40% 22%;
+    --radius: .625rem;
+    --gold: #ffcf5a;
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  .page-wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* Header, same as services.html */
+  .site-header {
+    border-bottom: 1px solid hsl(var(--border));
+    background: hsl(var(--background) / .9);
+  }
+  .site-nav {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; padding: 1.1rem 0; flex-wrap: wrap;
+  }
+  .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+  .brand svg { height: 34px; width: auto; }
+  .brand-name { font-family: "Sora", sans-serif; font-weight: 800; font-size: 1.15rem; }
+  .brand-name strong { color: hsl(var(--foreground)); }
+  .brand-name span { font-weight: 400; color: hsl(var(--muted-foreground)); margin-left: .35rem; }
+  .nav-links { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; }
+  .nav-links a {
+    color: hsl(var(--muted-foreground));
+    text-decoration: none; font-weight: 500; font-size: .95rem;
+  }
+  .nav-links a:hover { color: hsl(var(--foreground)); }
+  .nav-links a.current {
+    color: hsl(var(--primary));
+    background: hsl(var(--primary) / .12);
+    padding: .45rem .9rem; border-radius: .5rem;
+  }
+  .btn-primary {
+    display: inline-block; background: hsl(var(--primary));
+    color: hsl(var(--foreground)); text-decoration: none;
+    font-weight: 600; font-size: .95rem;
+    padding: .6rem 1.2rem; border-radius: .55rem;
+  }
+  .btn-primary:hover { filter: brightness(1.1); }
+  .btn-quiet {
+    display: inline-block; text-decoration: none;
+    color: hsl(var(--foreground));
+    border: 1px solid hsl(var(--border));
+    font-weight: 600; font-size: .95rem;
+    padding: .6rem 1.2rem; border-radius: .55rem;
+  }
+  .btn-quiet:hover { border-color: hsl(var(--muted-foreground)); }
+  a:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 3px; }
+
+  /* Hero */
+  .apps-hero { padding: 5.5rem 0 3.25rem; }
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    color: hsl(var(--primary));
+    letter-spacing: .35em; font-size: .85rem; font-weight: 500;
+    margin-bottom: 1.2rem;
+  }
+  .apps-hero h1 {
+    font-family: "Sora", sans-serif; font-weight: 800;
+    font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+    line-height: 1.08; max-width: 22ch;
+  }
+  .apps-hero h1 span { color: hsl(var(--primary)); }
+  .lede {
+    margin-top: 1.75rem; font-size: 1.2rem;
+    color: hsl(var(--muted-foreground)); max-width: 62ch;
+  }
+
+  /* Sections */
+  .sec { padding: 2.8rem 0; border-top: 1px solid hsl(var(--border)); }
+  .sec:first-of-type { border-top: none; }
+  .sec h2 {
+    font-family: "Sora", sans-serif; font-weight: 700;
+    font-size: 1.65rem; margin-bottom: .6rem;
+  }
+  .sec > p { max-width: 68ch; color: hsl(var(--foreground) / .92); }
+  .sec .sub { color: hsl(var(--muted-foreground)); margin-bottom: 1.6rem; max-width: 68ch; }
+
+  /* App cards */
+  .app-grid {
+    display: grid; gap: 1.4rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .app-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: calc(var(--radius) + 6px);
+    padding: 1.5rem; display: flex; flex-direction: column;
+  }
+  .app-top { display: flex; gap: 1rem; align-items: flex-start; }
+  .app-icon {
+    width: 56px; height: 56px; flex: none; border-radius: 14px;
+    background: linear-gradient(160deg, hsl(var(--primary)) 0%, #9b1b18 100%);
+    display: grid; place-items: center;
+    font-family: "Sora", sans-serif; font-weight: 800; font-size: 1.5rem;
+    color: #fff; overflow: hidden;
+  }
+  .app-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .app-title h3 { font-family: "Sora", sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2; }
+  .app-title .tag { color: hsl(var(--muted-foreground)); font-size: .92rem; margin-top: .2rem; }
+  .badge {
+    display: inline-block; font-family: "IBM Plex Mono", monospace;
+    font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+    padding: .25rem .6rem; border-radius: .4rem; margin-top: .55rem;
+  }
+  .badge.live { color: var(--gold); background: rgba(255,207,90,.12); border: 1px solid rgba(255,207,90,.35); }
+  .badge.soon { color: hsl(var(--muted-foreground)); background: hsl(var(--border) / .35); border: 1px solid hsl(var(--border)); }
+
+  .app-shot {
+    margin: 1.2rem 0 1rem; border-radius: 18px; overflow: hidden;
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--background));
+    aspect-ratio: 9 / 14; max-height: 360px; width: 100%;
+    display: grid; place-items: center;
+  }
+  .app-shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .app-shot.empty { display: none; }
+
+  .app-card p { color: hsl(var(--foreground) / .92); font-size: .97rem; }
+  .app-feats { list-style: none; margin: 1rem 0 0; padding: 0; }
+  .app-feats li { position: relative; padding-left: 1.4rem; margin: .45rem 0; font-size: .93rem; color: hsl(var(--foreground) / .88); }
+  .app-feats li::before { content: ""; position: absolute; left: 0; top: .55em; width: .45rem; height: .45rem; border-radius: 2px; background: var(--gold); }
+  .app-foot { margin-top: auto; padding-top: 1.3rem; display: flex; gap: .7rem; flex-wrap: wrap; align-items: center; }
+  .app-foot .price { font-family: "IBM Plex Mono", monospace; color: hsl(var(--muted-foreground)); font-size: .9rem; }
+
+  /* Process steps */
+  .steps { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); margin-top: 1.4rem; }
+  .step {
+    background: hsl(var(--card)); border: 1px solid hsl(var(--border));
+    border-radius: var(--radius); padding: 1.3rem 1.4rem;
+  }
+  .step .n { font-family: "IBM Plex Mono", monospace; color: var(--gold); font-size: .8rem; letter-spacing: .2em; }
+  .step h3 { font-family: "Sora", sans-serif; font-weight: 700; font-size: 1.05rem; margin: .4rem 0 .5rem; }
+  .step p { color: hsl(var(--foreground) / .88); font-size: .95rem; }
+
+  /* Pricing table */
+  .price-table {
+    width: 100%; border-collapse: separate; border-spacing: 0;
+    background: hsl(var(--card)); border: 1px solid hsl(var(--border));
+    border-radius: calc(var(--radius) + 4px); overflow: hidden; margin-top: 1.4rem;
+  }
+  .price-table th, .price-table td { padding: 1rem 1.1rem; text-align: left; vertical-align: top; border-bottom: 1px solid hsl(var(--border)); }
+  .price-table tr:last-child td { border-bottom: none; }
+  .price-table th {
+    font-family: "IBM Plex Mono", monospace; font-weight: 500; font-size: .75rem;
+    letter-spacing: .15em; text-transform: uppercase; color: hsl(var(--muted-foreground));
+    background: hsl(var(--background) / .5);
+  }
+  .price-table td.tier { font-family: "Sora", sans-serif; font-weight: 700; white-space: nowrap; }
+  .price-table td.tier small { display: block; font-family: "IBM Plex Sans", sans-serif; font-weight: 400; color: hsl(var(--muted-foreground)); font-size: .85rem; white-space: normal; margin-top: .2rem; }
+  .price-table td.what { color: hsl(var(--foreground) / .9); font-size: .95rem; max-width: 44ch; }
+  .price-table td.amt { font-family: "IBM Plex Mono", monospace; font-weight: 600; color: var(--gold); white-space: nowrap; font-size: 1.02rem; }
+  .price-table td.time { color: hsl(var(--muted-foreground)); white-space: nowrap; font-size: .9rem; }
+  @media (max-width: 760px) {
+    .price-table thead { display: none; }
+    .price-table, .price-table tbody, .price-table tr, .price-table td { display: block; width: 100%; }
+    .price-table tr { border-bottom: 1px solid hsl(var(--border)); padding: .6rem 0; }
+    .price-table tr:last-child { border-bottom: none; }
+    .price-table td { border-bottom: none; padding: .35rem 1.1rem; white-space: normal; }
+    .price-table td.tier { padding-top: .8rem; white-space: normal; }
+    .price-table td.amt::before { content: "Price: "; color: hsl(var(--muted-foreground)); font-family: "IBM Plex Sans", sans-serif; font-weight: 400; font-size: .85rem; }
+    .price-table td.time::before { content: "Timeline: "; }
+    .price-table td.time { padding-bottom: .9rem; }
+  }
+
+  .two-col { display: grid; gap: 1.4rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 1.6rem; }
+  .panel {
+    background: hsl(var(--card)); border: 1px solid hsl(var(--border));
+    border-radius: var(--radius); padding: 1.4rem 1.6rem;
+  }
+  .panel.gold { border-left: 4px solid var(--gold); }
+  .panel h3 { font-family: "Sora", sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: .8rem; }
+  .panel ul { list-style: none; margin: 0; padding: 0; }
+  .panel li { position: relative; padding-left: 1.4rem; margin: .5rem 0; font-size: .95rem; color: hsl(var(--foreground) / .9); }
+  .panel li::before { content: ""; position: absolute; left: 0; top: .6em; width: .45rem; height: .45rem; border-radius: 2px; background: var(--gold); }
+  .panel li b { color: hsl(var(--foreground)); }
+  .panel p { color: hsl(var(--foreground) / .9); font-size: .95rem; }
+  .panel p + p { margin-top: .7rem; }
+  .fine { color: hsl(var(--muted-foreground)); font-size: .88rem; margin-top: 1.2rem; max-width: 70ch; }
+
+  /* CTA */
+  .apps-cta {
+    margin: 3.25rem 0 4.5rem;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: calc(var(--radius) + 6px);
+    padding: 3rem 2rem; text-align: center;
+  }
+  .apps-cta h2 { font-family: "Sora", sans-serif; font-weight: 800; font-size: 2rem; }
+  .apps-cta p { color: hsl(var(--muted-foreground)); max-width: 55ch; margin: 1rem auto 1.75rem; }
+  .cta-row { display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap; }
+
+  .site-footer {
+    border-top: 1px solid hsl(var(--border));
+    padding: 2rem 0 2.5rem;
+    color: hsl(var(--muted-foreground)); font-size: .9rem;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="page-wrap">
+    <nav class="site-nav" aria-label="Main">
+      <a class="brand" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 95" aria-hidden="true"><path d="M34 8 L41 22 V66 H27 V22 Z" fill="#e5322e"/><path d="M27 52 L18 66 H27 Z" fill="#e5322e"/><path d="M41 52 L50 66 H41 Z" fill="#e5322e"/><path d="M29 68 H39 L36 86 H32 Z" fill="#ffcf5a"/><path d="M66 22 L46 44 L66 66" stroke="#e8edf6" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        <span class="brand-name"><strong>KDJ</strong><span>Enterprises</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/apps.html" class="current" aria-current="page">Apps</a>
+        <a href="/security-cameras.html">Cameras</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/support.html">Support</a>
+        <a href="/about.html">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="mailto:support@kdjent.com?subject=App%20build" class="btn-primary">Get started</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="page-wrap">
+
+  <div class="apps-hero">
+    <p class="eyebrow">APPS</p>
+    <h1>Apps we've shipped. <span>Apps we can build for you.</span></h1>
+    <p class="lede">KDJ builds iPhone apps and web tools for small businesses along the Grand Strand. Here are three we put on the App Store ourselves, what it costs to have one built, and how the process works from the first email to the day it goes live.</p>
+  </div>
+
+  <section class="sec" id="built">
+    <h2>Built and shipped by KDJ Apps</h2>
+    <p class="sub">Three iPhone apps, each designed, built, tested on real phones, and submitted to Apple by us. No account required for any of them, no ads, and your data never leaves your phone.</p>
+
+    <div class="app-grid">
+
+      <article class="app-card" id="gear-upkeep">
+        <div class="app-top">
+          <div class="app-icon"><img src="/apps/img/gear-upkeep-icon.png" alt="" onerror="this.remove()">G</div>
+          <div class="app-title">
+            <h3>Gear Upkeep</h3>
+            <div class="tag">Never miss an oil change, filter, or tune-up again.</div>
+            <span class="badge live">On the App Store</span>
+          </div>
+        </div>
+        <figure class="app-shot"><img src="/apps/img/gear-upkeep.png" alt="Gear Upkeep screenshot showing what's due" onerror="this.parentNode.classList.add('empty')"></figure>
+        <p>Tracks the maintenance on everything around your place with a service schedule: mowers, boats, generators, water filters, furnace, hot tub. Add an item, and the app tells you what's due, what to buy, and what you did last time. Great for a landscaper, marina, or rental owner too.</p>
+        <ul class="app-feats">
+          <li>Ready-made schedules for common equipment, editable to match your manual</li>
+          <li>Tasks that repeat by time, by engine hours, or both</li>
+          <li>Reminders a week ahead and the day of, plus fall and spring checklists</li>
+          <li>One-tap part searches at Amazon, Walmart, Lowe's, and Home Depot</li>
+          <li>Service history PDF for one item or your whole collection</li>
+        </ul>
+        <div class="app-foot">
+          <a class="btn-primary" href="https://apps.apple.com/us/app/gear-upkeep/id6830923378" target="_blank" rel="noopener">View on the App Store</a>
+          <span class="price">One-time purchase, no subscription</span>
+        </div>
+      </article>
+
+      <article class="app-card" id="tallymile">
+        <div class="app-top">
+          <div class="app-icon"><img src="/apps/img/tallymile-icon.png" alt="" onerror="this.remove()">T</div>
+          <div class="app-title">
+            <h3>Tallymile</h3>
+            <div class="tag">Drive. It counts. Automatic mileage for taxes.</div>
+            <span class="badge soon">Coming soon to the App Store</span>
+          </div>
+        </div>
+        <figure class="app-shot"><img src="/apps/img/tallymile.png" alt="Tallymile screenshot showing trips sorted as business or personal" onerror="this.parentNode.classList.add('empty')"></figure>
+        <p>Records every drive on its own, even with the app closed, and ends the trip when you park. Tap Business or Personal once, and future trips between the same two places sort themselves. At tax time it hands you monthly and yearly reports with the IRS deduction already figured.</p>
+        <ul class="app-feats">
+          <li>Fully automatic trip detection, no start or stop taps</li>
+          <li>Battery friendly: GPS only runs while you're moving</li>
+          <li>"Learn my places" sorting that remembers your routes</li>
+          <li>IRS-ready PDF and spreadsheet reports with the correct rate per trip date</li>
+          <li>No subscription, no account, trips never leave the phone</li>
+        </ul>
+        <div class="app-foot">
+          <span class="price">Built for Schedule C filers and gig drivers</span>
+        </div>
+      </article>
+
+      <article class="app-card" id="ladderly">
+        <div class="app-top">
+          <div class="app-icon"><img src="/apps/img/ladderly-icon.png" alt="" onerror="this.remove()">L</div>
+          <div class="app-title">
+            <h3>Ladderly</h3>
+            <div class="tag">Change one letter at a time. Climb to the goal word.</div>
+            <span class="badge soon">Coming soon to the App Store</span>
+          </div>
+        </div>
+        <figure class="app-shot"><img src="/apps/img/ladderly.png" alt="Ladderly screenshot showing a daily word ladder puzzle" onerror="this.parentNode.classList.add('empty')"></figure>
+        <p>The classic word ladder puzzle: start at one word, change one letter per step, and reach the goal word with every step a real word. A new puzzle every day plus 320 more in four difficulty packs. We built it to prove the range: a polished game with native Game Center leaderboards, not just business tools.</p>
+        <ul class="app-feats">
+          <li>Daily puzzle, the same for everyone, with spoiler-free shareable results</li>
+          <li>Par scoring, hints, undo, and give-up with the full solution</li>
+          <li>Game Center leaderboards for today's ladder, best streak, and under-par solves</li>
+          <li>Every one of its 1,050 puzzles verified solvable</li>
+          <li>Works fully offline, free, no ads</li>
+        </ul>
+        <div class="app-foot">
+          <span class="price">Free download</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="sec" id="how">
+    <h2>How an app gets built</h2>
+    <p class="sub">You don't need to know anything technical. You need to know what the app should do and who will use it. We handle the rest.</p>
+    <div class="steps">
+      <div class="step">
+        <span class="n">01</span>
+        <h3>Scope and written quote</h3>
+        <p>We talk through what the app needs to do, check the App Store for name and category conflicts, and send a written quote with what's included and what isn't. Nothing starts until you approve it.</p>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <h3>A real build on your phone</h3>
+        <p>Within the first week you install a working version through Apple's TestFlight and try it on your own phone. New builds land every few days, so you react to the real thing instead of mockups.</p>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <h3>Real-world testing</h3>
+        <p>Anything that uses location, the camera, notifications, or background work gets tested on physical phones, not just a simulator. For Tallymile that meant actual test drives.</p>
+      </div>
+      <div class="step">
+        <span class="n">04</span>
+        <h3>Store listing, done for you</h3>
+        <p>Screenshots, description, privacy page, support page, and Apple's review notes are all prepared and submitted. We handle Apple's questions during review, too.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="pricing">
+    <h2>What we build</h2>
+    <p class="sub">Every project is quoted in writing before any work starts. Want to see where our own apps stand right now? Check the <a href="/status/" style="color:var(--gold,#ffcf5a);font-weight:600;text-decoration:none">app status page</a>. Most apps we build need no servers at all, which means no monthly hosting bill for you after launch.</p>
+
+    <table class="price-table">
+      <thead>
+        <tr><th>Tier</th><th>What it covers</th><th>Timeline</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tier">iPhone app, simple<small>Like Gear Upkeep or Ladderly</small></td>
+          <td class="what">One job done well. Data stays on the phone, no accounts or logins. Trackers, checklists, calculators, reference tools, simple games.</td>
+          <td class="time">2 to 4 weeks</td>
+        </tr>
+        <tr>
+          <td class="tier">iPhone app, advanced<small>Like Tallymile</small></td>
+          <td class="what">Adds background location, camera, Game Center, push notifications, or similar features that need real-device testing.</td>
+          <td class="time">4 to 8 weeks</td>
+        </tr>
+        <tr>
+          <td class="tier">Connected app</td>
+          <td class="what">Accounts, sync across devices, payments, or a web dashboard behind the app. Scoped and quoted in writing.</td>
+          <td class="time">Quoted</td>
+        </tr>
+        <tr>
+          <td class="tier">Web app or internal tool<small>Browser-based, runs on any device</small></td>
+          <td class="what">A tool for your office that lives in a browser: tracking, quoting, reporting, scheduling. Replaces the spreadsheet everybody fights over.</td>
+          <td class="time">1 to 3 weeks</td>
+        </tr>
+        <tr>
+          <td class="tier">Care plan<small>Optional, cancel anytime</small></td>
+          <td class="what">iOS updates, bug fixes, small changes, and App Store housekeeping so your app keeps working as phones change.</td>
+          <td class="time">Monthly</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="two-col">
+      <div class="panel gold">
+        <h3>Discounts</h3>
+        <ul>
+          <li><b>Veterans, active duty, and first responders: 10% off any build.</b> Veteran-owned shop taking care of its own. Just mention it.</li>
+          <li><b>Repeat customers: 10% off your second app and every one after.</b> The Apple account, build pipeline, and listing templates are already done from the first app, so you get the savings.</li>
+          <li><b>Managed IT customers get the repeat-customer rate on their first app.</b></li>
+        </ul>
+        <p class="fine" style="margin-top:.9rem">Discounts don't stack. Whichever one is bigger applies.</p>
+      </div>
+      <div class="panel">
+        <h3>Good to know before you ask</h3>
+        <ul>
+          <li><b>Apple's developer account</b> (a yearly fee paid to Apple) is opened in your business's name, so you own the app, not us.</li>
+          <li><b>The quote lists what's included.</b> Features added after approval are priced as a change order before we build them, never as a surprise on the invoice.</li>
+          <li><b>App Review takes time.</b> Apple reviews every app before it goes live and often asks a question or two. Budget at least one round trip; we handle the back and forth.</li>
+          <li><b>iPhone first.</b> Android is available on request and quoted separately.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="apps-cta">
+    <h2>Tell us what the app should do.</h2>
+    <p>Two or three sentences in plain words is enough to start. We'll reply with questions, a written quote, and a realistic timeline. No obligation and no pressure.</p>
+    <div class="cta-row">
+      <a class="btn-primary" href="mailto:support@kdjent.com?subject=App%20build%20idea">Email support@kdjent.com</a>
+      <a class="btn-quiet" href="/services.html">See all services</a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="page-wrap">
+    <p>&copy; 2026 KDJ Enterprises, LLC &middot; Murrells Inlet, South Carolina &middot; Veteran owned</p>
+  </div>
+</footer>
+
+</body>
+</html>
