@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T05:30:00Z",
+  "updated": "2026-11-13T05:35:00Z",
   "apps": [
     {
       "id": "gear-upkeep",
@@ -18,7 +18,10 @@
           "note": "Tested on a phone. Google Play listing coming next."
         }
       ],
-      "activity": null
+      "activity": {
+        "builds_30d": 22,
+        "last_build": "2026-11-10"
+      }
     },
     {
       "id": "ladderly",
@@ -31,7 +34,10 @@
           "note": "Approved by Apple."
         }
       ],
-      "activity": null
+      "activity": {
+        "builds_30d": 9,
+        "last_build": "2026-11-06"
+      }
     },
     {
       "id": "tallymile",
@@ -49,7 +55,10 @@
           "note": "Passed a real-road test drive. Google Play listing coming next."
         }
       ],
-      "activity": null
+      "activity": {
+        "builds_30d": 9,
+        "last_build": "2026-11-10"
+      }
     },
     {
       "id": "fly-guys",
@@ -67,7 +76,10 @@
           "note": "Tested. Going to Google Play for the group only."
         }
       ],
-      "activity": null
+      "activity": {
+        "builds_30d": 33,
+        "last_build": "2026-11-13"
+      }
     },
     {
       "id": "debtday",
@@ -80,7 +92,10 @@
           "note": "Store build ready for testing."
         }
       ],
-      "activity": null
+      "activity": {
+        "builds_30d": 3,
+        "last_build": "2026-11-07"
+      }
     },
     {
       "id": "nextoff",
@@ -93,7 +108,10 @@
           "note": "Built and passed its first test."
         }
       ],
-      "activity": null
+      "activity": {
+        "builds_30d": 2,
+        "last_build": "2026-11-06"
+      }
     },
     {
       "id": "tipbook",
@@ -106,7 +124,10 @@
           "note": "Built and passed its first test."
         }
       ],
-      "activity": null
+      "activity": {
+        "builds_30d": 1,
+        "last_build": "2026-10-30"
+      }
     },
     {
       "id": "inchwise",
@@ -119,7 +140,10 @@
           "note": "Built and passed its first test."
         }
       ],
-      "activity": null
+      "activity": {
+        "builds_30d": 1,
+        "last_build": "2026-11-05"
+      }
     }
   ]
 }
